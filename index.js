@@ -3,11 +3,15 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import * as dotenv from "dotenv";
+import cors from "cors";
+
 dotenv.config();
 const app = express();
 const PORT = 8000;
 //req -> what we send to server
 //res -> what we receive from server
+
+app.use(cors());
 
 //Intercepter / Converting body data to json
 
